@@ -42,6 +42,8 @@
                             <thead>
                                 <tr class="text-dark">
                                     <!-- <th scope="col"><input class="form-check-input" type="checkbox"></th> -->
+                                    <th scope="col">HÌNH</th>
+
                                     <th scope="col">ID</th>
                                     <th scope="col">TÊN</th>
                                     <th scope="col">GIÁ NHẬP</th>
@@ -53,6 +55,8 @@
                             <tbody>
                                 <tr>
                                     <!-- <td><input class="form-check-input" type="checkbox"></td> -->
+                                    <td><img src="bootstrap-admin-template-free.jpg" width="100%" height="50px" alt=""></td>
+
                                     <td>01</td>
                                     <td>INV-0123</td>
                                     <td>$123</td>
