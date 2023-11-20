@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SizeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +25,4 @@ Route::get('/danh-sach-loai', function () {
 Route::get('/danh-sach-mau', function () {
     return view('MAU/danh-sach');
 });
-Route::get('/danh-sach-size', function () {
-    return view('SIZE/danh-sach');
-});
+Route::get('/danh-sach-size',[SizeController::class,'View']);
