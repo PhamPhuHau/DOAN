@@ -16,13 +16,28 @@ use App\Http\Controllers\SizeController;
 Route::get('/', function () {
     return view('ADMIN/trang-chu');
 });
-Route::get('/danh-sach-san-pham', function () {
+
+/*-----------------------SANPHAM-------------------- */
+
+Route::get('/san-pham-danh-sach', function () {
     return view('SANPHAM/danh-sach');
 });
-Route::get('/danh-sach-loai', function () {
+Route::get('/cap-nhat-san-pham', function () {
+    return view('SANPHAM/cap-nhat');
+});
+
+/*-----------------------LOAI-------------------- */
+
+Route::get('/loai-danh-sach', function () {
     return view('LOAI/danh-sach');
 });
-Route::get('/danh-sach-mau', function () {
+
+/*-----------------------MAU-------------------- */
+
+Route::get('/mau-danh-sach', function () {
     return view('MAU/danh-sach');
 });
+
+
+/*----------------------------------------------------------------------------*/
 Route::get('/danh-sach-size',[SizeController::class,'View']);

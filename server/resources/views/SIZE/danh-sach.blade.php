@@ -50,7 +50,7 @@
                             <tbody>
                                 <tr>
                                     <!-- <td><input class="form-check-input" type="checkbox"></td> -->
-                                    <td><input type="text"></td>
+                                    <td style="width: 25%;"><input type="text" ></td>
                                     <td>S</td>
                                     
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
