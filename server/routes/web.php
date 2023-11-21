@@ -41,10 +41,21 @@ Route::name('Loai_')->group(function(){
 Route::name('Mau_')->group(function(){
     Route::get('/mau-danh-sach', function () {
         return view('MAU/danh-sach');
-    })->name('Danh_Sach');    
+    })->name('Danh_Sach');
 });
 
 /*----------------------------------------------------------------------------*/
-Route::name('Size_')->group(function(){
-    Route::get('/danh-sach-size',[SizeController::class,'View'])->name('Danh_Sach');
+Route::prefix('SIZE')->group(function(){
+    Route::name('SIZE.')->group(function(){
+    Route::get('/danh-sach-size',[SizeController::class,'View'])->name('danh-sach');
+    Route::get("/them",[SizeController::class, 'themMoi'])->name('them');
+    Route::post("/them",[SizeController::class, 'xuLyThemMoi'])->name('xl-them');
+
+    Route::get("/cap-nhat/{id}",[SizeController::class, 'Edit'])->name('cap-nhat');
+    Route::post("/cap-nhat/{id}",[SizeController::class, 'xlEdit'])->name('cap-nhat');
+
+    Route::get("/xoa/{id}",[SizeController::class, 'Delete'])->name('xoa');
+
+    });
 });
+
