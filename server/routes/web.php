@@ -19,25 +19,32 @@ Route::get('/', function () {
 
 /*-----------------------SANPHAM-------------------- */
 
-Route::get('/san-pham-danh-sach', function () {
-    return view('SANPHAM/danh-sach');
-});
-Route::get('/cap-nhat-san-pham', function () {
-    return view('SANPHAM/cap-nhat');
+Route::name('San_Pham_')->group(function(){
+    Route::get('/san-pham-danh-sach', function () {
+        return view('SANPHAM/danh-sach');
+    })->name('Danh_Sach');
+    Route::get('/cap-nhat-san-pham', function () {
+        return view('SANPHAM/cap-nhat');
+    })->name('Cap_Nhat');
 });
 
 /*-----------------------LOAI-------------------- */
 
-Route::get('/loai-danh-sach', function () {
-    return view('LOAI/danh-sach');
+Route::name('Loai_')->group(function(){
+    Route::get('/loai-danh-sach', function () {
+        return view('LOAI/danh-sach');
+    })->name('Danh_Sach');
 });
 
 /*-----------------------MAU-------------------- */
 
-Route::get('/mau-danh-sach', function () {
-    return view('MAU/danh-sach');
+Route::name('Mau_')->group(function(){
+    Route::get('/mau-danh-sach', function () {
+        return view('MAU/danh-sach');
+    })->name('Danh_Sach');    
 });
 
-
 /*----------------------------------------------------------------------------*/
-Route::get('/danh-sach-size',[SizeController::class,'View']);
+Route::name('Size_')->group(function(){
+    Route::get('/danh-sach-size',[SizeController::class,'View'])->name('Danh_Sach');
+});
